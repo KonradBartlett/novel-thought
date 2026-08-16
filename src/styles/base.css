@@ -28,10 +28,49 @@
   html[data-theme="dark"] #sun-svg {
     display: block;
   }
+
+  /* Smooth 0.67s ease-out transition when switching light/dark theme */
+  html,
+  body,
+  header,
+  footer,
+  nav,
+  main,
+  section,
+  article,
+  div,
+  a,
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  svg,
+  button,
+  input,
+  textarea,
+  code,
+  pre,
+  hr,
+  blockquote,
+  ::backdrop {
+    transition: background-color 0.67s ease-out,
+                color 0.67s ease-out,
+                border-color 0.67s ease-out,
+                fill 0.67s ease-out,
+                stroke 0.67s ease-out,
+                outline-color 0.67s ease-out,
+                text-decoration-color 0.67s ease-out;
+  }
+
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
+
   section,
   footer {
     @apply mx-auto max-w-3xl px-4;
